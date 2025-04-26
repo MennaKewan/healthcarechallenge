@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ By Categories</title>
+    <link rel="stylesheet" href="Competition.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <!-- شاشة اختيار الجولات -->
+    <div id="game-rounds-screen" class="screen">
+        <img src="./LOGOS/9TH HPC LOGO .png" alt="Logo" class="top-right-logo">  
+        <h2>Choose Your Game Round</h2>
+        <div class="categories-container">
+            <div class="category-column">
+                <h3>MCQ by Categories</h3>
+                <button class="question-btn" onclick="startGameRound(1)">Start Game</button>
+            </div>
+            <div class="category-column">
+                <h3> Number Connections </h3>
+                <button class="question-btn" onclick="startGameRound(2)">Start Game</button>
+            </div>
+            <div class="category-column">
+                <h3>The Bill</h3>
+                <button class="question-btn" onclick="startGameRound(3)">Start Game</button>
+            </div>
+        </div>
+    
+        <div id="scoreboard">
+            <p class="finscore"><span id="team1-display">Team 1</span>: <span id="team1-score">0</span></p> 
+            <p class="finscore"><span id="team2-display">Team 2</span>: <span id="team2-score">0</span></p>
+        </div>
+    </div>
+
+    <script src="Competition.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

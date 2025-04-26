@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  width: 100px;
+  z-index: 1000; /* لضمان بقاء اللوجو فوق كل العناصر */
+}
+
+.quiz-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 120px;
+  padding: 20px;
+  border: 2px solid #155e87;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #2fb3c2;
+  position: relative;
+}
+
+.scoreboard {
+  position: fixed; /* تحديد الموضع الثابت */
+  top: 20px; /* المسافة من أعلى الصفحة */
+  left: 50%;
+  transform: translateX(-50%); /* توسيط العنصر أفقيًا */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px; /* عرض الكائن */
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #2fb3c2, #155e87);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  gap: 50px;
+  z-index: 1000; /* لضمان أنه يبقى فوق باقي العناصر */
+}
+
+
+.scoreboard div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.scoreboard span {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* أيقونات الفرق */
+.team-icon {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* تنسيق المؤقت */
+/* تنسيق الـ Timer */
+
+.timer-container {
+  margin: 20px auto; /* مسافة من الأعلى والأسفل */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  text-align: center;
+  color: #00bcd4;
+  font-size: 1.5em;
+}
+
+.clock {
+  height: 60px;
+  width: 60px;
+  border: 5px solid #00bcd4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+}
+#prev {
+  background-color: #144566;
+}
+#team1 {
+  background-color: #1b7eab;
+}
+#team2 {
+  background-color: #008e8e;
+}
+#wrong {
+  background-color: #c64f17;
+}
+#correct {
+  background-color: #038369;
+}
+#next {
+  background-color: #144566;
+}
+.question-image {
+  max-width: 100%;
+  margin-top: 10px;
+  display: none;
+}
+
+/* تأثير عند اختيار الفريق */
+.active-team {
+  background-color: #dcbb2b !important; /* لون مميز للفريق النشط */
+  color: #000; /* تغيير لون النص ليكون واضح */
+  font-weight: bold;
+  box-shadow: 0 0 10px #dcbb2b;
+  transform: scale(1.1);
+}
+.question-number {
+    background-color: #038369;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.number-right {
+    margin-left: 10px;
+    float: right;
+}
+
+.number-left {
+    margin-right: 10px;
+    float: left;
+}
+
+#question {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.finish-btn {
+    position: absolute;
+    top: calc(50vh + 100px); /* لوضعه تحت الـ scoreboard */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* لون مختلف للتمييز */
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند تحريك الماوس فوق الزر */
+.finish-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثير عند الضغط على الزر */
+.finish-btn:active {
+    transform: translateX(-50%) translateY(0);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#question-image {
+  width: 50%; /* تحديد العرض */
+  max-width: 200px; /* أقصى عرض للصور */
+  height: auto; /* الحفاظ على النسبة بين العرض والارتفاع */
+  display: block; /* التأكد من عرض الصورة بشكل صحيح */
+  margin: 0 auto; /* لتوسيط الصورة إذا كانت أصغر من الحجم المحدد */
+}

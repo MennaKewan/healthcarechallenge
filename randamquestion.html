@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كويز مؤتمر التخصصات الصحية</title>
+    <link rel="stylesheet" href="randamquestion.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./LOGOS/9TH HPC LOGO .png"
+        alt="لوجو مؤتمر التخصصات الصحية"
+        class="logo"
+      />
+    </header>
+    <main>
+      <div class="quiz-container">
+        <h2 id="question">السؤال يظهر هنا</h2>
+        <img
+          id="question-image"
+          class="question-image"
+          src=""
+          alt="صورة السؤال"
+        />
+        <div class="timer-container">
+          <div class="timer">
+            <div class="clock" id="clock">30</div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev">السؤال السابق</button>
+          <button id="team1">اسم التيم الأول</button>
+          <button id="team2">اسم التيم الثاني</button>
+          <button id="wrong">إجابة خاطئة</button>
+          <button id="correct">إجابة صحيحة</button>
+          <button id="next">السؤال التالي</button>
+        </div>
+      </div>
+      <div class="score-section">
+        <div class="scoreboard">
+            <div>
+                <span class="team-icon">1</span>
+                <span id="team1-name">Team 1</span>:
+                <span id="score1">0</span>
+            </div>
+            <div>
+                <span class="team-icon">2</span>
+                <span id="team2-name">Team 2</span>:
+                <span id="score2">0</span>
+            </div>
+        </div>
+        <div id="finish-game" class="finish-btn">إنهاء اللعبة</div>
+    </div>
+    </main>
+    <script defer src="randamquestion.js"></script>
+  </body>
+</html>

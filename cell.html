@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مسابقة الخلية</title>
+    <link rel="stylesheet" href="cell.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="fullcell">
+      <div class="team-left" onclick="declareWinner('Team 1')">
+        <div class="teamname" id="team1-name">Team 1</div>
+        <div class="score" id="team1-score"></div>
+      </div>
+
+      <div class="maincell">
+        <h1>مسابقة الخلية</h1>
+        <img src="./LOGOS/cell.jpg" alt="Logo" class="center-logo" />
+    
+      </div>
+
+
+      <div class="team-right" onclick="declareWinner('Team 2')">
+        <div class="teamname" id="team2-name">Team 2</div>
+        <div class="score" id="team2-score"></div>
+      </div>
+    </div>
+    <script>
+      function declareWinner(team) {
+        Swal.fire({
+          title: team + " هو الفائز! 🎉",
+          icon: "success",
+          confirmButtonText: "حسناً"
+        });
+      }
+    </script>
+    <script src="cell.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ By Categories</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- شاشة البداية -->
+    <div id="intro-screen" class="screen">
+        <img src="./LOGOS/9TH HPC LOGO .png" alt="Conference Logo">
+        <h1></h1>
+    </div>
+
+    <!-- شاشة اختيار الفريق -->
+    <div id="team-selection" class="screen">
+        <img src="./LOGOS/9TH HPC LOGO .png" alt="Logo" class="top-right-logo">  
+        <h2>Select Your Team</h2>
+        <input type="text" id="team1-name" placeholder="Enter Team 1 Name" class="team-input">
+        <input type="text" id="team2-name" placeholder="Enter Team 2 Name" class="team-input">
+        <button id="start-btn" disabled onclick="startGame()">Start</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

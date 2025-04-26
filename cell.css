@@ -1,0 +1,195 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  color: #2facd8;
+}
+
+h1 {
+  color: #86d0ee;
+  margin-top: 30px; /* تحريك العنوان لأسفل */
+  margin-right: 30px;
+}
+
+.team1 {
+  background-color: #038369;
+  color: white;
+}
+.team2 {
+  background-color: #c64f17;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  position: relative;
+  top: 20px; /* تحريك الأزرار لأسفل */
+  left: -20px; /* تحريك الأزرار لليسار */
+}
+
+.active-team {
+  background-color: #dcbb2b !important;
+  color: black !important;
+}
+
+.scoreboard {
+  position: absolute;
+  top: 80vh;
+  left: 49%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around; /* ✅ يزيد التباعد بين التيمين */
+  align-items: center;
+  width: 400px; /* ✅ زودت العرض */
+  padding: 15px 30px; /* ✅ زودت المسافة الداخلية */
+  background: linear-gradient(135deg, #2fb3c2, #155e87);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  gap: 50px; /* ✅ يتحكم في المسافة بين التيمين */
+}
+
+.scoreboard span {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.finish-btn {
+  position: absolute;
+  top: 85vh;
+  left: 48%;
+  transform: translateX(-50%);
+  width: 180px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b); /* لون مختلف للتمييز */
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* margin-bottom: 20px; */
+}
+
+/* تأثير عند تحريك الماوس فوق الزر */
+.finish-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثير عند الضغط على الزر */
+.finish-btn:active {
+  transform: translateX(-50%) translateY(0);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#team1Btn {
+  background-color: #038369;
+  color: white;
+  /* width: 120px; */
+  padding: 16px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 19px;
+  font-weight: bold;
+}
+#team2Btn {
+  background-color: #c64f17;
+  color: white;
+  /* width: 120px; */
+  padding: 16px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.team-left,
+.team-right {
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  width: 200px;
+  height: fit-content;
+  text-align: center;
+}
+.teamname {
+  font-size: x-large;
+  font-weight: bold;
+  padding-bottom: 13px;
+}
+.score {
+  font-size: x-large;
+  font-weight: bold;
+}
+.team-left {
+  background-color: #1b7eab; /* لون الفريق الأول */
+  color: white;
+  transition: background-color 0.3s ease; /* إضافة انتقال سلس */
+  margin-left: 140px;
+}
+
+.team-left:hover {
+  background-color: #155a7a; /* لون مختلف عند التمرير */
+  cursor: pointer; /* تغيير شكل المؤشر إلى يد */
+}
+
+.team-right {
+  background-color: #1b7eab; /* لون الفريق الثاني */
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-right: 140px;
+}
+.team-right:hover {
+  background-color: #155a7a; /* لون مختلف عند التمرير */
+  cursor: pointer; /* تغيير شكل المؤشر إلى يد */
+}
+
+
+.team-left, .team-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* محاذاة المحتويات في المنتصف */
+}
+.maincell {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* محاذاة العناصر في المنتصف */
+  justify-content: flex-start; /* محاذاة العناصر لأعلى الصفحة */
+  height: auto; /* تأكد من أن الحاوية لا تأخذ كامل ارتفاع الصفحة */
+  padding-top: 20px; /* إضافة مساحة من الأعلى */
+}
+
+.center-logo {
+  max-width: 60%; /* تقليص حجم الصورة إلى 60% من عرض الصفحة */
+  height: auto; /* الحفاظ على نسبة الأبعاد الأصلية */
+  margin: 20px 0; /* إضافة هامش فوق وتحت الصورة */
+}
+
+.fullcell {
+  display: flex;
+  justify-content: space-between; /* توزيع الفرق بين الزرين */
+  align-items: flex-start; /* محاذاة العناصر للأعلى */
+  padding: 20px;
+  height: 100vh; /* جعل الحاوية تأخذ كامل ارتفاع الصفحة */
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCQ By Categories</title>
+    <link rel="stylesheet" href="Mcq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div id="categories-screen" class="screen">
+      <div class="twoteam">
+        <div class="team-left" onclick="selectTeam('Team 1')">
+          <div class="teamname" id="team1-name">Team 1</div>
+          <div class="score" id="team1-score">0 Points</div>
+        </div>
+
+        <div class="return1" onclick="finishGame()">Finish</div>
+
+        <div class="team-right" onclick="selectTeam('Team 2')">
+          <div class="teamname" id="team2-name">Team 2</div>
+          <div class="score" id="team2-score">0 Points</div>
+        </div>
+      </div>
+      <h2>Menu</h2>
+      <div class="categories-container">
+        <!-- First Category: old is gold -->
+        <div class="category-column">
+          <h3>History</h3>
+          <button
+            class="question-btn"
+            data-category="Historical"
+            data-points="10"
+            onclick="startQuestion(10, 'Historical')"
+          >
+            10 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Historical"
+            data-points="30"
+            onclick="startQuestion(30, 'Historical')"
+          >
+            30 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Historical"
+            data-points="50"
+            onclick="startQuestion(50, 'Historical')"
+          >
+            50 Points
+          </button>
+         
+        </div>
+
+        <!-- Second Category: under the microscope -->
+        <div class="category-column">
+          <h3>Geography</h3>
+          <button
+            class="question-btn"
+            data-category="Geographic"
+            data-points="10"
+            onclick="startQuestion(10, 'Geographic')"
+          >
+            10 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Geographic"
+            data-points="30"
+            onclick="startQuestion(30, 'Geographic')"
+          >
+            30 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Geographic"
+            data-points="50"
+            onclick="startQuestion(50, 'Geographic')"
+          >
+            50 Points
+          </button>
+          
+        </div>
+
+        <!-- Third Category: around the world -->
+        <div class="category-column">
+          <h3>Science</h3>
+          <button
+            class="question-btn"
+            data-category="Science"
+            data-points="10"
+            onclick="startQuestion(10, 'Science')"
+          >
+            10 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Science"
+            data-points="30"
+            onclick="startQuestion(30, 'Science')"
+          >
+            30 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Science"
+            data-points="50"
+            onclick="startQuestion(50, 'Science')"
+          >
+            50 Points
+          </button>
+          
+        </div>
+
+        <!-- Fourth Category: KSAU League -->
+        <div class="category-column">
+          <h3>Medicine</h3>
+          <button
+            class="question-btn"
+            data-category="Medicine"
+            data-points="10"
+            onclick="startQuestion(10, 'Medicine')"
+          >
+            10 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Medicine"
+            data-points="30"
+            onclick="startQuestion(30, 'Medicine')"
+          >
+            30 Points
+          </button>
+          <button
+            class="question-btn"
+            data-category="Medicine"
+            data-points="50"
+            onclick="startQuestion(50, 'Medicine')"
+          >
+            50 Points
+          </button>
+          
+        </div>
+
+      </div>
+    </div>
+
+    <div id="question-screen" class="screen">
+      <div class="back-to-categories">
+        <a href="#" onclick="goBackToCategories()">Back to Categories</a>
+      </div>
+      <div class="timer-container">
+        <div class="timer">
+          <div class="clock" id="clock">30</div>
+        </div>
+      </div>
+      <div id="question-container" class="question-container"></div>
+    </div>
+
+    <script src="Mcq.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>
