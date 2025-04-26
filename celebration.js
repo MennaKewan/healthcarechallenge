@@ -65,6 +65,6 @@ window.onload = () => {
 // عند الضغط على زر الرجوع، امسح اسم الفائز
 Reloadbtn.addEventListener("click", () => {
     localStorage.removeItem("winnerName");
-    window.location.replace("./main.html");
+    window.location.replace("./index.html");
     window.history.forward();
 });

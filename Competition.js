@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     team2Display.innerText = team2Name;
   } else {
     alert("Team names not found! Redirecting to team selection...");
-    window.location.href = "main.html";
+    window.location.href = "index.html";
   }
 
   // التحقق من انتهاء اللعبة
